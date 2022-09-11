@@ -1,4 +1,4 @@
-FROM ruby
+FROM python
 
 WORKDIR /app
 
