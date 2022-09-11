@@ -1,7 +1,7 @@
-FROM python
+FROM ruby
 
 WORKDIR /app
 
-COPY . /app
+COPY . .
 
 CMD ["python", "bmi.py"]
