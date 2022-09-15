@@ -7,8 +7,17 @@ services:
     # environment:
     #   - MONGO_INITDB_USERNAME: user
     #   - MONGO_INITDB_PASSWORD: password
-  # backend:
+  backend:
+    build: ./backend
+    ports:
+      - "80:80"
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app
+      - /app/node_modules
+
   # frontend:
 
 volumes:
   data:
+  logs:
