@@ -4,8 +4,11 @@ services:
     image: "mongo"
     volumes:
       - data:/data/db
-    environment:
-      - MONGO_INITDB_USERNAME: user
-      - MONGO_INITDB_PASSWORD: password
+    # environment:
+    #   - MONGO_INITDB_USERNAME: user
+    #   - MONGO_INITDB_PASSWORD: password
   # backend:
   # frontend:
+
+volumes:
+  data:
