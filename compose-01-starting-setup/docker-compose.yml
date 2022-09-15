@@ -15,6 +15,10 @@ services:
       - logs:/app/logs
       - ./backend:/app
       - /app/node_modules
+    env_file:
+      - ./env/backend.env
+    depends_on:
+      - mongodb
 
   # frontend:
 
