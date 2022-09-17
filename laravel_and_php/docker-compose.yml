@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - ./src:var/www/html:ro
+      - ./src:/var/www/html:ro
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
 
   php:
@@ -15,7 +15,7 @@ services:
       context: ./dockerfiles
       dockerfile: php.dockerfile
     volumes:
-      - ./src:var/www/html:delegated
+      - ./src:/var/www/html:delegated
     ports:
       - "3000:9000"
 
